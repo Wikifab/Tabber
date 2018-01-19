@@ -51,6 +51,18 @@
 			} );
 
 			$this.addClass( 'tabberlive' );
+			
+			$('.UsersPagesLinksButtonCounter').on( 'click',function( e ){
+				var title =  $( this ).attr( 'title' );
+				e.preventDefault();
+				if ( history.pushState ) {
+					history.pushState( null, null, '#' + title );
+				} else {
+					location.hash = '#' + title;
+				}
+				showContent( title );
+						
+			});
 		} );
 	};
 }( jQuery ) );
