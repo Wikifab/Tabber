@@ -52,7 +52,7 @@
 
 			$this.addClass( 'tabberlive' );
 			
-			$('.UsersPagesLinksButtonCounter').on( 'click',function( e ){
+			$(document.querySelectorAll("[data-linkstype='member']")).on( 'click',function( e ){
 				var title =  $( this ).attr( 'title' );
 				e.preventDefault();
 				if ( history.pushState ) {
