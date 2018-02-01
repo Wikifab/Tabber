@@ -63,6 +63,10 @@
 				showContent( title );
 						
 			});
+			
+			// trick : hide tab with no title :
+			$('.tabbernav a[title=""]').parent().hide();
+			
 		} );
 	};
 }( jQuery ) );
