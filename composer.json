@@ -1,0 +1,8 @@
+{
+    "name": "wikifab/tabber",
+    "description": "This is a mediawiki extension to create tabs in mediawiki pages",
+    "type": "mediawiki-extension",
+    "license": "GNU",
+    "require": {
+    }
+}
