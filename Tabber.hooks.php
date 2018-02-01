@@ -19,7 +19,13 @@ class TabberHooks {
 	 * @return	boolean	true
 	 */
 	static public function onParserFirstCallInit(Parser &$parser) {
+		global $wgForceTabberLoad ;
+
 		$parser->setHook("tabber", "TabberHooks::renderTabber");
+
+		if (isset($wgForceTabberLoad) && $wgForceTabberLoad) {
+			$parser->getOutput()->addModules('ext.Tabber');
+		}
 
 		return true;
 	}
